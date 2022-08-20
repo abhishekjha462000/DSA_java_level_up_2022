@@ -30,8 +30,8 @@ public class Main {
 	private static void initializeIO(){
         try 
         {
-        	Path currentRelativePath = Paths.get("");
-        	String myPath = currentRelativePath.toAbsolutePath().toString();
+            Path currentRelativePath = Paths.get("");
+            String myPath = currentRelativePath.toAbsolutePath().toString();
             System.setIn(new FileInputStream(myPath + "\\src\\input.txt"));
             System.setOut(new PrintStream(new FileOutputStream(myPath + "\\src\\output.txt")));
             System.setErr(new PrintStream(new FileOutputStream(myPath + "\\src\\error.txt")));
