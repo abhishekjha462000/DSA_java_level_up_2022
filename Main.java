@@ -30,15 +30,15 @@ public class Main {
 	private static void initializeIO(){
         try 
         {
-            Path currentRelativePath = Paths.get("");
-            String myPath = currentRelativePath.toAbsolutePath().toString();
-            System.setIn(new FileInputStream(myPath + "\\src\\input.txt"));
-            System.setOut(new PrintStream(new FileOutputStream(myPath + "\\src\\output.txt")));
-            System.setErr(new PrintStream(new FileOutputStream(myPath + "\\src\\error.txt")));
+            	Path currentRelativePath = Paths.get("");
+            	String myPath = currentRelativePath.toAbsolutePath().toString();
+            	System.setIn(new FileInputStream(myPath + "\\src\\input.txt"));
+            	System.setOut(new PrintStream(new FileOutputStream(myPath + "\\src\\output.txt")));
+            	System.setErr(new PrintStream(new FileOutputStream(myPath + "\\src\\error.txt")));
         }
         catch (Exception e) 
         {
-            System.err.println(e.getMessage());
+            	System.err.println(e.getMessage());
         }
     }
 
