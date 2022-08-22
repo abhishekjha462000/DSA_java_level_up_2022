@@ -1,5 +1,6 @@
     public static void main(String[] args) throws IOException{
 
+        // initializeIO();
         Scanner scn = new Scanner(System.in);
 
         int n = scn.nextInt();
@@ -14,34 +15,34 @@
     }
 
     private static void run(int[] nums){
-        int n = nums.length;
-
-        int[] prefixSumArray = new int[n+1];
+        HashMap<Integer,Integer> map = new HashMap<>();
 
         /**
-         * This is not the standard way to create prefix sum array
+         * The reason for putting this is empty subarray
          **/
-        
-        prefixSumArray[0] = 0;
-
-        for(int i = 1; i <= n;i++){
-            prefixSumArray[i] = nums[i-1]+prefixSumArray[i-1];
-        }
-
-        HashMap<Integer,Integer> sumFreq = new HashMap<>();
+        map.put(0,1);
 
         int count = 0;
 
-        for(int i = 0;i < prefixSumArray.length;i++){
-            int value = prefixSumArray[i];
+        int sum = 0;
 
-            if(sumFreq.containsKey(value)){
-                int freq = sumFreq.get(value);
+        for(int value : nums){
+            sum += value;
+            Integer freq = map.get(sum);
+
+
+            if(freq != null){
+                /**
+                 * The sum is already present
+                 **/
                 count += freq;
+                map.put(sum,freq+1);
 
-                sumFreq.put(value,freq+1);
             }else{
-                sumFreq.put(value,1);
+                /**
+                 * This means that sum has ocuured for the first time, so store it in hashmap
+                 **/
+                map.put(sum,1);
             }
         }
 
