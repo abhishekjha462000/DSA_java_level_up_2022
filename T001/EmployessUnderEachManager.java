@@ -1,5 +1,4 @@
      public static void main(String[] args) throws IOException{
-        initializeIO();
 
         Scanner scn = new Scanner(System.in);
 
