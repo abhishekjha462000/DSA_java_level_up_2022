@@ -1,45 +1,71 @@
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
-import java.math.BigInteger;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Scanner;
-@SuppressWarnings("unused")
-public class Main {
+     public static void main(String[] args) throws IOException{
+        initializeIO();
 
-	public static void main(String[] args) {
-		Scanner scn = new Scanner(System.in);
-		
-		BigInteger n = scn.nextBigInteger();
-		
-		BigInteger two = BigInteger.valueOf(2);
-		BigInteger smallAns = n.divide(two) ;
+        Scanner scn = new Scanner(System.in);
 
-		if(n.remainder(two).equals(BigInteger.valueOf(0))) {
-			System.out.println(smallAns);
-		}else {
-			smallAns = smallAns.multiply(BigInteger.valueOf(-1)).add(BigInteger.valueOf(-1));
-			System.out.println(smallAns);
-		}
-		
-		scn.close();
-		
-	}
-	
-	private static void initializeIO(){
-        try 
-        {
-            	Path currentRelativePath = Paths.get("");
-            	String myPath = currentRelativePath.toAbsolutePath().toString();
-            	System.setIn(new FileInputStream(myPath + "\\src\\input.txt"));
-            	System.setOut(new PrintStream(new FileOutputStream(myPath + "\\src\\output.txt")));
-            	System.setErr(new PrintStream(new FileOutputStream(myPath + "\\src\\error.txt")));
+        int n =  scn.nextInt();
+
+        HashMap<String,HashSet<String>> hm = new HashMap<>();
+
+        String ceo = "";
+
+        while(n-- != 0){
+        	String employee = scn.next();
+        	String manager = scn.next();
+
+
+        	if(manager.equals(employee)){
+                ceo = manager;
+        		continue;
+        	}
+
+        	if(hm.containsKey(manager)){
+        		HashSet<String> hs = hm.get(manager);
+        		hs.add(employee);
+        	}else{
+        		HashSet<String> hs = new HashSet<>();
+
+        		hs.add(employee);
+        		hm.put(manager,hs);
+        	}
         }
-        catch (Exception e) 
-        {
-            	System.err.println(e.getMessage());
+        // System.out.println(hm);
+
+        HashMap<String,Integer> ans = new HashMap<>();
+
+        run(hm,ans,ceo);
+
+        for(String key : ans.keySet()){
+            System.out.println(key + " " + ans.get(key));
         }
     }
 
-}
+    private static int run(HashMap<String,HashSet<String>> hm,HashMap<String,Integer> ans,String manager){
+
+        if(hm.containsKey(manager) == false){
+            ans.put(manager,0);
+            return 1;
+        }
+
+        int temp = 0 ;
+
+        for(String employees : hm.get(manager)){
+            temp += run(hm,ans,employees);
+        }
+    
+        ans.put(manager,temp);
+
+        return temp + 1;
+    }
+
+
+
+    // 6
+    // A C
+    // B C
+    // C F
+    // D E
+    // E F
+    // F F
+
+
