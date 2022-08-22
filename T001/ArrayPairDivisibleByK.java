@@ -38,7 +38,7 @@
         }
 
 
-        System.out.println(rem);
+        // System.out.println(rem);
 
         for(Integer key : rem.keySet()){
             int freq = rem.get(key);
