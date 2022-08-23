@@ -33,3 +33,21 @@ private static void run(int[] nums,int k){
         System.out.println(count);
 
     }
+
+
+
+    // 1. You are given an array of integers(arr) and a number K.
+
+    // 2. You have to find the count of subarrays whose sum is divisible by K.
+
+    // Sample Input
+
+    // 6
+
+    // 2 7 6 1 4 5
+
+    // 3
+    // Sample Output
+
+    // 5
+

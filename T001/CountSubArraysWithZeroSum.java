@@ -32,3 +32,17 @@
 
         System.out.println(count);
     }
+
+
+    // 1. You are given an array(arr) of integers.
+
+    // 2. You have to find the count of all subarrays with sum 0.
+
+    // Sample Input
+
+    // 8
+
+    // 15 -2 2 -8 1 7 10 23
+    // Sample Output
+
+    // 3

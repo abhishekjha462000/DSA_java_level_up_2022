@@ -28,3 +28,20 @@
         System.out.println(count);
 
     }
+
+
+    // 1. You are given an array of integers(arr) and a number K.
+
+    // 2. You have to find the count of subarrays whose sum equals k.
+
+    // Sample Input
+
+    // 3
+
+    // 1 1 1
+
+    // 2
+    // Sample Output
+
+    // 2
+

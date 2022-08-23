@@ -64,6 +64,15 @@
     }
 
 
+    // 1. You are given number N and 2*N number of strings that represent a list of N tickets(source and destination).
+
+    // 2. You have to find the itinerary in order using the given list of tickets.
+
+
+
+    // Assumption -> The input list of tickets is not cyclic and there is one ticket from every city except the final destination. 
+
+
 
 
     // 4

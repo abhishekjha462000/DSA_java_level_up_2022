@@ -43,3 +43,30 @@
 
         System.out.println(true);
     }
+
+
+
+
+    // 1. You are given an array(arr) of integers and a number K.
+
+    // 2. You have to find if the given array can be divided into pairs such that the sum of every pair is divisible by k.
+    // Constraints
+
+    // 1 <= N <= 10^6
+
+    // 1 <= arr[i] <= 10^4
+
+    // 1 <= K <= 10^4
+
+    // Sample Input
+
+    // 4
+
+    // 9 7 5 3
+
+    // 6
+    // Sample Output
+
+    // true
+
+

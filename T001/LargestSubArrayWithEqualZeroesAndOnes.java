@@ -26,3 +26,20 @@ private static void largestSubArrayWithEqualZeroesAndOnes(int[] nums){
 
         System.out.println(maxLength);
     }
+
+
+
+    // 1. You are given an array that contains only 0s and 1s.
+
+    // 2. You have to find length of the longest subarray with equal number of 0s and 1s.
+
+    // Sample Input
+
+    // 6
+
+    // 0 1 1 0 1 1
+    // Sample Output
+
+    // 4
+
+
