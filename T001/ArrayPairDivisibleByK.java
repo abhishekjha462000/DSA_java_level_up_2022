@@ -1,21 +1,3 @@
-    public static void main(String[] args) throws IOException{
-
-        Scanner scn = new Scanner(System.in);
-
-        int n = scn.nextInt();
-
-        int[] nums = new int[n];
-
-        for(int i = 0; i < n;i++){
-            nums[i] = scn.nextInt();
-        }
-
-        int k = scn.nextInt();
-
-        run(nums,k);
-
-    }
-
     private static void run(int[] nums,int k){
         int len = nums.length;
 
