@@ -1,19 +1,3 @@
-    public static void main(String[] args) throws IOException{
-
-        // initializeIO();
-        Scanner scn = new Scanner(System.in);
-
-        int n = scn.nextInt();
-
-        int[] nums = new int[n];
-
-        for(int i = 0;i < n ;i++){
-            nums[i] = scn.nextInt();
-        }
-
-        run(nums);
-    }
-
     private static void run(int[] nums){
         HashMap<Integer,Integer> map = new HashMap<>();
 
