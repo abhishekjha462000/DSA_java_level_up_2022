@@ -1,4 +1,4 @@
-    private static void run(int[] nums){
+    private static void CountSubArraysWithZeroSum(int[] nums){
         HashMap<Integer,Integer> map = new HashMap<>();
 
         /**
