@@ -82,26 +82,6 @@ public class Main {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 1. You are given an array of integers(arr).
 // 2. You have to find the count of equivalent subarrays.
 // 3. A subarray is equivalent if,
