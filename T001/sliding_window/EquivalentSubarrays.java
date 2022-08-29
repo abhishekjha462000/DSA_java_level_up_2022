@@ -79,3 +79,42 @@ public class Main {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 1. You are given an array of integers(arr).
+// 2. You have to find the count of equivalent subarrays.
+// 3. A subarray is equivalent if,
+//    count of unique integers in the subarray = count of unique integers in the given array.
+
+// Sample Input
+
+// 5
+// 2 1 3 2 3
+
+// Sample Output
+// 5
+
+
+
+
