@@ -1,4 +1,4 @@
-1. <p style = "color : blue"> Normal Traversals </p>
+1. <p style = "background-color:tomato;"> Normal Traversals </p>
    preorder   === node left  right<br>
    inorder    === left node  right<br>
    postorder  === left right node<br>
