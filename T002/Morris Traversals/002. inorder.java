@@ -34,7 +34,11 @@ private static List<Integer> inOrder(Node node){
 
     // ROUGH WORK
 
-
+    /**
+     * If you want reverse inorder just flip left and right in the above code.
+     * 
+     * That is replace "left" with "right" and "right" with "left".
+     **/
 
 
 

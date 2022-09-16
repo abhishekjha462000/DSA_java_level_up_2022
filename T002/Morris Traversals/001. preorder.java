@@ -46,6 +46,11 @@ private static List<Integer> preOrder(Node node){
 
     // ROUGH WORK
 
+    /**
+     * If you want reverse preorder just flip left and right in the above code.
+     * 
+     * That is replace "left" with "right" and "right" with "left".
+     **/
 
 
 
