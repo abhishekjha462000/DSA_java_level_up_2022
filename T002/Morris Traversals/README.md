@@ -37,7 +37,7 @@
       - Once while moving down the edge.
 
    <br>
-   so the time complexity is `O(3 * (n-1))`.
+   so the time complexity is `O(3 \* (n-1))`.
 
 
        
