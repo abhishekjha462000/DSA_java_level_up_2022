@@ -36,6 +36,9 @@
       - Once while disconnecting it from the rightmost node of the left subtree.
       - Once while moving down the edge.
 
+   <br>
+   so the time complexity is `O(3 * (n-1)) ~ O(3 _n_)`
+
 
        
 
