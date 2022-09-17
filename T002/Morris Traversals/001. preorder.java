@@ -29,10 +29,10 @@ private static List<Integer> preOrder(Node node){
 
                 if(nodep1.right == null){
                     // This means that we are visiting "node" for the first time
+                    ans.add(node.data);
                     nodep1.right = node;
                     node = node.left;
                 }else if(nodep1.right == node){
-                    ans.add(node.data);
                     nodep1.right = null; // disconnect
                     node = node.right; // move to the right
                 }
@@ -55,8 +55,3 @@ private static List<Integer> preOrder(Node node){
 
 
 
-
-
-
-
-    
