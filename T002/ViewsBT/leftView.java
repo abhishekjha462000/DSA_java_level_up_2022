@@ -34,6 +34,32 @@ private static List<Integer> leftView(Node root){
         return ans;
     }
 
+    /**
+     * Approach 2
+     **/
+
+    // Recursive simple approach -- without using level order 
+    public static List<Integer> leftView(Node root)
+    {
+        List<Integer> ans = new ArrayList<>();
+        
+        helper(root, 0, ans);
+        return ans;
+    }
+    
+    private static void helper(Node root, int level, List<Integer> ans){
+        if(root == null)
+            return ;
+        
+        if(ans.size() == level)
+        {
+            ans.add(root.data);
+        }
+        
+        helper(root.left, level + 1, ans);
+        helper(root.right, level + 1, ans);
+    }
+
 
     // ROUGH WORK
 
