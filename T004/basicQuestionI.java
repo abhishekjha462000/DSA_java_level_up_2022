@@ -1,4 +1,4 @@
-public static boolean isEven(int n){
+    public static boolean isEven(int n){
         /**
          * A number N is even if and only if the rightmost bit of N is 0
          **/

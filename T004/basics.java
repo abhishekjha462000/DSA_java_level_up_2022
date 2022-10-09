@@ -1,4 +1,4 @@
-public static void basics(){
+        public static void basics(){
 
         /**
          * There are four basic bitwise operations := 
