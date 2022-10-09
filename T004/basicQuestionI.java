@@ -66,6 +66,30 @@
     }
 
 
+    public static int flipKthBit(int n, int k){
+        int mask = 1 << k;
+
+        /**
+         * The mask has kth bit as 1 and rest of the bits are 0.
+         * 
+         * Let us say that in n, the kth bit was 1. Then ans would have 1 ^ 1 = 0 as the kth bit.
+         * On the contrary if the kth bit was 0, then ans would have 0 ^ 1 = 1 as the kth bit.
+         * 
+         * In either case, the bit at kth position gets flipped.
+         * 
+         * Now let us take any general position j(not equal to k).
+         * If the bit at this position is 0, then bit at the same position in ans would be 0 ^ 0 = 0 which is same.
+         * On the contrary, If the bit at this position is 1 then bit at the same position in ans would be 1 ^ 0 = 1 which is same as that of n.
+         * 
+         * Thus, only the bit at the kth position gets flipped. 
+         **/
+        
+        int ans = n ^ mask;
+
+        return ans;
+    }
+
+
 
     // ROUGH WORK
 
