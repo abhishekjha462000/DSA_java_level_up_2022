@@ -43,7 +43,7 @@ class graphInput{
 
         	// Since graph is assumed to be bidirectional by default
         	graph[v1].add(new Edge(v1, v2));
-        	graph[v2].add(new Edge(v2, v1));
+        	graph[v2].add(new Edge(v2, v1)); // In case the graph is directed we do not need this line
         }
 
 
