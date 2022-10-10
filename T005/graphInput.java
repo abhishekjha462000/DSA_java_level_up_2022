@@ -6,7 +6,7 @@ import java.util.*;
 
 class graphInput{
 
-	private static class Edge{
+	private static class Edge {
 		int src;
 		int nbr;
 
@@ -22,7 +22,8 @@ class graphInput{
 		}
 
 	}
-    public static void main(String[] args) throws IOException{
+
+    public static void main(String[] args) throws IOException {
         initializeIO();
 
         Scanner scn = new Scanner(System.in);
@@ -49,15 +50,15 @@ class graphInput{
         print(graph);
     }
 
-    private static void print(List<Edge>[] graph){
+    private static void print(List<Edge>[] graph) {
     	int nvtces = graph.length;
 
     	for(int i = 0;i<nvtces;i++){
     		System.out.println(i + "->" + graph[i]);
     	}
     }
-    
-    private static void initializeIO(){
+
+    private static void initializeIO() {
         try 
         {
             System.setIn(new FileInputStream("input.txt"));
