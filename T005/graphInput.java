@@ -5,10 +5,10 @@ import java.util.*;
 
 
 class graphInput{
+
 	private static class Edge{
 		int src;
 		int nbr;
-
 
 		Edge(){}
 		Edge(int src, int nbr){
@@ -20,6 +20,7 @@ class graphInput{
 		public String toString(){
 			return src + "->" + nbr;
 		}
+
 	}
     public static void main(String[] args) throws IOException{
         initializeIO();
@@ -55,6 +56,7 @@ class graphInput{
     		System.out.println(i + "->" + graph[i]);
     	}
     }
+    
     private static void initializeIO(){
         try 
         {
