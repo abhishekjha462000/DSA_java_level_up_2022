@@ -22,7 +22,7 @@
     **/
 
    private static void bfs(int src, List<Edge>[] graph){
-      
+
       Queue<MyEdge> mq = new ArrayDeque<>();
       boolean[] vis = new boolean[graph.length];
       
@@ -31,7 +31,7 @@
       while(!mq.isEmpty()){
          MyEdge removed = mq.remove();
 
-         int srcRem = removed.src;
+         int srcRem = removed.src; // src of removed MyEdge
 
          if(!vis[srcRem]){
             vis[srcRem] = true;
