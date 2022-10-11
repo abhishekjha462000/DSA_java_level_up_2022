@@ -1,3 +1,9 @@
+    /**
+     * bfs always gives us the shortest path between two vertices in a graph.
+     * This concept can be used to find the minimum time to spread a infection or 
+     * something like that.
+     **/
+
     private static void bfs(int src, List<Edge>[] graph){
         int nvtces = graph.length;
         Queue<Integer> mq = new ArrayDeque<>();
