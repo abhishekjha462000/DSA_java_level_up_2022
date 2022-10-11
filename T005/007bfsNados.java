@@ -22,9 +22,10 @@
     **/
 
    private static void bfs(int src, List<Edge>[] graph){
+      
       Queue<MyEdge> mq = new ArrayDeque<>();
-      // Queue<MyEdge> hq = new ArrayDeque<>();
       boolean[] vis = new boolean[graph.length];
+      
       mq.add(new MyEdge(src, "" + src));
 
       while(!mq.isEmpty()){
