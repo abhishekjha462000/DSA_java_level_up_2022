@@ -45,3 +45,44 @@
 
 
 
+
+
+
+
+
+
+    // CORRECT CODE
+
+
+    private static boolean isCyclic(List<Edge>[] graph){
+      int src = 0;
+      boolean[] vis =  new boolean[graph.length];
+
+      while(src < graph.length){
+
+         if(!vis[src]){
+               Queue<Integer> mq = new ArrayDeque<>();
+
+         mq.add(src);
+
+         while(!mq.isEmpty()){
+            int removed = mq.remove();
+
+            if(!vis[removed]){
+               vis[removed] = true;
+               // System.out.println(Arrays.toString(vis));
+               for(Edge e: graph[removed]){
+                  int nbr = e.nbr;
+                  
+                  if(!vis[nbr])
+                     mq.add(nbr);
+               }
+            }else{
+               return true;
+            }
+         }
+         }
+         src++;
+      }
+      return false;
+   }
