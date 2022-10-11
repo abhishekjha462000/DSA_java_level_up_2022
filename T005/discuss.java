@@ -61,3 +61,42 @@ private static void dfsFromPoint(int src, List<Edge>[] graph){
 
 // 1 0 3 2 
 // 1 0 3 4 5 6 // But I want only this, How do I do this???????
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////// I TRIED THIS ////////////////////////////////////////////////
+
+    private static void dfsFromPoint(int src, List<Edge>[] graph){
+        int nvtces = graph.length;
+        boolean[] vis = new boolean[nvtces];
+        String[] ans = new String[1];
+        ans[0] = "";
+        dfsFromPointHelper(src, graph, vis, ans);
+        System.out.println(ans[0]);
+    }
+
+    private static void dfsFromPointHelper(int src, List<Edge>[] graph, boolean[] vis, String[] ans){
+        
+        vis[src] = true;
+        ans[0]  += src + " ";
+
+        for(Edge e : graph[src]){
+            int nbr = e.nbr;
+
+            if(!vis[nbr]){
+                dfsFromPointHelper(nbr, graph, vis, ans);
+            }
+        }
+    }
+
+
+    // This works but that not a path, However give me the vertices in the graph in a connected component
+    // 1 0 3 2 4 5 6 
