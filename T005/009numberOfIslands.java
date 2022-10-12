@@ -1,4 +1,6 @@
 class Solution {
+    
+    // problem link -- https://leetcode.com/problems/number-of-islands/
     public int numIslands(char[][] grid) {
         int count = 0; // counts the total number of islands
 
