@@ -1,4 +1,6 @@
 class Solution {
+
+    // problem -- https://leetcode.com/problems/number-of-provinces/
     private static class Edge{
         int src;
         int nbr;

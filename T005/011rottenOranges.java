@@ -1,4 +1,6 @@
 class Solution {
+
+    // problem -- https://leetcode.com/problems/rotting-oranges/
     public int orangesRotting(int[][] grid) {
         int fresh = 0; // count of fresh oranges
         
