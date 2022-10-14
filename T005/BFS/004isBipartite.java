@@ -1,4 +1,19 @@
    private static boolean isBipartite(List<Edge>[] graph){
+      /**
+       * A graph G is bipartite iff its vertex set can be partitioned into two mutually exclusive and exhaustive sets V1 and V2 such that every edge
+       * e of G has its one vertex in V1 and the other vertex in V2
+       **/
+
+      /**
+       * Theorem := 
+       * A graph G is bipartite iff it has no cycle of odd length
+      **/
+
+      /**
+       * Corollary := 
+       * An acyclic graph is bipartite
+       **/
+
       int nvtces = graph.length;
 
       boolean[] vis = new boolean[nvtces];
