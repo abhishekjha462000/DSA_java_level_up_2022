@@ -33,7 +33,6 @@ public class Main {
         int n = scn.nextInt();
 
         Bridge[] bridges = new Bridge[n];
-
         for(int i = 0; i < n;i++){
             int north = scn.nextInt();
             int south = scn.nextInt();
